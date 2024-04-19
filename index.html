@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te amo, negra</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/908/631/590/hello-kitty-1440x900-anime-hello-kitty-hd-art-wallpaper-preview.jpg'); /* Reemplaza 'https://example.com/tu-imagen-de-fondo.jpg' con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  #mensaje {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #respuesta {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  button {
+    background-color: #fff;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  button:hover {
+    background-color: #ffff;
+  }
+  input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<div id="mensaje">
+  <p>Hola amor, ¿Quieres saber algo?</p>
+  <p>Pero te toca pasar una prueba</p>
+  <button onclick="resolverAcertijo('si')">Si, intenso</button>
+  <button onclick="resolverAcertijo('no')">No, sapo</button>
+</div>
+
+<div id="respuesta">
+  <p>Bueno amor, dale pa ve:</p>
+  <p>¿Qué hicimos el 22 de julio de 2023?</p>
+  <input type="text" id="respuestaInput">
+  <button onclick="verificarRespuesta()">Enviar</button>
+</div>
+
+<script>
+function resolverAcertijo(respuesta) {
+  if (respuesta === "si") {
+    document.getElementById("mensaje").style.display = "none";
+    document.getElementById("respuesta").style.display = "block";
+  } else {
+    alert("Bueno ;)");
+  }
+}
+
+function verificarRespuesta() {
+  var respuesta = document.getElementById("respuestaInput").value.toLowerCase();
+  if (respuesta === "fuimos a comer pizza") {
+    document.getElementById("respuesta").innerHTML = "<p>Aro asi e, desde hace tiempo, me has gustado muchisimo, hoy quisiera que seas tu, quien me acompañe en mi camino, que seas mi aliada, compañera, quiero que podamos tener algo lindo, sin miedos, restricciones, problemas, nada de eso, se que los dos nos amamos mucho, y queremos el bien, entonces, que dices, ¿Te gustaria ser mi novia? <3</p>";
+  } else {
+    document.getElementById("respuesta").innerHTML = "<p>Nada, eso no fue, reinicia la pagina, e intenta de nuevo</p>";
+  }
+}
+</script>
+
+</body>
+</html>
